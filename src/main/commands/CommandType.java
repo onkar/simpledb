@@ -1,5 +1,11 @@
 package main.commands;
 
+/**
+ * Type identification of commands
+ * 
+ * @author onkar.deshpande@gmail.com (Onkar Deshpande)
+ *
+ */
 public enum CommandType {
   SET("set"), UNSET("unset"), GET("get"), NUMEQUALTO("numequalto"), END("end"), BEGIN("begin"), COMMIT(
       "commit"), ROLLBACK("rollback"), INVALID("invalid");

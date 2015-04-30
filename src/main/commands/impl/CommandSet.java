@@ -4,6 +4,12 @@ import main.core.Container;
 import main.core.DataStore;
 import main.core.TransactionManager;
 
+/**
+ * Command that handles Set operation
+ * 
+ * @author onkar.deshpande@gmail.com (Onkar Deshpande)
+ *
+ */
 public class CommandSet implements Command {
   private String name;
   private String value;

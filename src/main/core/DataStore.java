@@ -5,6 +5,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Actual data store of the database. It holds a hashmap for key-value mapping so that GET and SET
+ * operations are done in O(1). It also holds another map for value counts so that NUMEQUALTO
+ * operation can be done in O(1). It has a list to keep track of keys which are UNSET.
+ * 
+ * @author onkar.deshpande@gmail.com (Onkar Deshpande)
+ *
+ */
 public class DataStore {
   private Map<String, String> data;
   private Map<String, Integer> valuesCountMap;
@@ -22,6 +30,7 @@ public class DataStore {
 
   public void setKeyValue(String key, String value) {
     if (entriesToBeDeleted.contains(key)) {
+      // Check if previously unset key is set again. In such case, remove it from the internal list.
       entriesToBeDeleted.remove(key);
     }
     data.put(key, value);
@@ -29,6 +38,7 @@ public class DataStore {
 
   public String getKeyValue(String key) {
     if (entriesToBeDeleted.contains(key)) {
+      // If the key is unset, it will be present in the list. Retun null.
       return null;
     }
     return data.get(key);
@@ -39,6 +49,7 @@ public class DataStore {
   }
 
   public void unsetKey(String key) {
+    // If a key is unset, add it to the list and remove it from the hashmap.
     entriesToBeDeleted.add(key);
     data.remove(key);
   }

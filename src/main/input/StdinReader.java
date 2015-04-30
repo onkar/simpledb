@@ -4,6 +4,12 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/**
+ * Class that reads from standard input
+ * 
+ * @author onkar.deshpande@gmail.com (Onkar Deshpande)
+ *
+ */
 public class StdinReader implements Reader {
   private BufferedReader reader;
 

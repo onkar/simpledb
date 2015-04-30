@@ -1,5 +1,11 @@
 package main.core;
 
+/**
+ * A container class that holds actual data store in database and transaction manager
+ * 
+ * @author onkar.deshpande@gmail.com (Onkar Deshpande)
+ *
+ */
 public class Container {
   private DataStore dataStore;
   private TransactionManager transactionMgr;

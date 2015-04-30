@@ -5,6 +5,12 @@ import main.commands.parser.Parser;
 import main.input.Reader;
 import main.input.StdinReader;
 
+/**
+ * Entry point to the application
+ * 
+ * @author onkar.deshpande@gmail.com (Onkar Deshpande)
+ *
+ */
 public class Main {
   public static void main(String[] args) {
     System.out.println("Please start entering database commands!");

@@ -12,6 +12,12 @@ import main.commands.impl.CommandRollback;
 import main.commands.impl.CommandSet;
 import main.commands.impl.CommandUnset;
 
+/**
+ * Command line parser
+ * 
+ * @author onkar.deshpande@gmail.com (Onkar Deshpande)
+ *
+ */
 public class CommandParser implements Parser {
   public static final String delimiter = " ";
 
@@ -22,6 +28,7 @@ public class CommandParser implements Parser {
     CommandType command;
     String[] args = new String[0];
     if (cmd.contains(delimiter)) {
+      // Split the command and find out command name and its arguments
       int spacePosition = cmd.indexOf(delimiter);
       String type = cmd.substring(0, spacePosition);
       command = CommandType.commandTypeFromString(type);

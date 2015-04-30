@@ -4,6 +4,13 @@ import main.commands.impl.Command;
 import main.commands.parser.Parser;
 import main.core.Container;
 
+/**
+ * Container is passed to every command so that we can support new commands as and when needed
+ * without changing the command execution code.
+ * 
+ * @author onkar.deshpande@gmail.com (Onkar Deshpande)
+ *
+ */
 public class CommandExecutor {
   private Parser parser;
   private Container container;
