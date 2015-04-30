@@ -1,7 +1,7 @@
 # simpledb
 A simple in memory database like Redis. This is a solution of [Thumbtack coding challenge](https://www.thumbtack.com/challenges/simple-database)
 
-You would need maven installed on your system to run the solution. Here are the steps -
+You would need java and maven installed on your system to run the solution. I am using Java 1.6 and Apache Maven 3.2.5. Here are the steps -
 
 1. Install Apache Maven-3.2.5
 2. Clone this repository and go to the directory that contains pom.xml
